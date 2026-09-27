@@ -8,6 +8,7 @@ function startScroll(speed = 2){
 
 function stopScroll(){
     clearInterval(timer);
+    timer = undefined;
 }
 
 chrome.runtime.onMessage.addListener((message) => {
@@ -18,7 +19,7 @@ chrome.runtime.onMessage.addListener((message) => {
 
     if (message.action == "stop") stopScroll();
 
-    if (message.action == "changeSpeed"){
+    if (message.action == "changeSpeed" && timer !== undefined){
         stopScroll();
         startScroll(message.speed);
     }

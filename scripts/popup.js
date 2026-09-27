@@ -12,7 +12,7 @@ document.getElementById("stop").addEventListener("click", () => {
 });
 
 document.getElementById("speed").addEventListener("input", () => {
-    const speed = document.getElementById("speed").value;
+    const speed = document.getElementById("speed").value || 2;
     chrome.tabs.query({active: true, currentWindow: true}, (tabs) => {
         chrome.tabs.sendMessage(tabs[0].id, {action: "changeSpeed", speed: speed});
     });

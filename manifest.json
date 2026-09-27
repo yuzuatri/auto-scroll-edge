@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Simple Auto Scroll",
-  "version": "1.0",
+  "version": "1.0.1",
   "description": "Simple and easy-to-use auto scroll extension for Microsoft Edge",
   "icons": {
     "16": "images/auto-scroll-16.png",
